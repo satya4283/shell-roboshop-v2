@@ -3,6 +3,7 @@
 user_id=$(id -u)
 logs_folder="/var/log/roboshop"
 logs_file="${logs_folder}/${0}.log"
+domain_name="daws92ss.store"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -65,7 +66,7 @@ app_setup(){
 }
 
 systemd_setup(){
-    sed -i "s/DOMAIN_NAME/"$domain_name"/g" $scripts_dir/$app_name.service &>> $logs_file
+    sed -i "s/DOMAIN_NAME/$domain_name/g" $scripts_dir/$app_name.service &>> $logs_file
     validate $? "DOMAIN_NAME updation in service file"
     cp  "$scripts_dir/$app_name.service"  /etc/systemd/system/$app_name.service &>> $logs_file
     validate $? "service file created"
