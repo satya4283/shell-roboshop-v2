@@ -77,8 +77,8 @@ systemd_setup(){
 }
 
 restart(){
-    systemctl restart catalogue
-    validate $? "Restarting Catalogue"
+    systemctl restart $app_name
+    validate $? "Restarting $app_name"
 }
 
 total_time(){
