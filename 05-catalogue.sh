@@ -1,4 +1,4 @@
-app_name="catalogue"
+app_name=catalogue
 source ./common.sh
 
 app_setup
