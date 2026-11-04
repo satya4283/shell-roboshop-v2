@@ -27,5 +27,8 @@ cp "$scripts_dir/roboshop.conf" /etc/nginx/default.d/roboshop.conf
 nginx -t &>>$logs_file
 validate $? "Checks for file mistakes"
 
-restart
+systemctl restart nginx
+validate $? "Restarting Nginx "
+
+
 total_time
