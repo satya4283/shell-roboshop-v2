@@ -1,4 +1,6 @@
-app_name="cart"
+#!/bin/bash
+
+app_name=cart
 source ./common.sh
 
 app_setup

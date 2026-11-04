@@ -1,6 +1,6 @@
+#!/bin/bash
 
 source ./common.sh
-
 check_root
 
 dnf module disable redis -y &>> $logs_file

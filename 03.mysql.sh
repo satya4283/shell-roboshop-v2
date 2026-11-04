@@ -1,6 +1,6 @@
+#!/bin/bash
 
 source ./common.sh
-
 check_root
 
 dnf module enable mysql:8.4 -y &>> $logs_file
