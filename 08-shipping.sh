@@ -2,8 +2,8 @@ app_name=shipping
 source ./common.sh
 check_root
 
-java_setup
 app_setup
+java_setup
 
 
 dnf install mysql -y &>> $logs_file
